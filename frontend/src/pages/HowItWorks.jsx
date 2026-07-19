@@ -5,9 +5,9 @@ import { Network, Database, Cpu, BookOpen } from 'lucide-react';
 const HowItWorks = () => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8 max-w-5xl mx-auto pb-10">
-      <div className="bg-medical-600 text-white p-8 rounded-2xl shadow-lg">
-        <h1 className="text-3xl font-bold mb-2 flex items-center"><BookOpen className="mr-3" /> Architecture & Machine Learning Guide</h1>
-        <p className="opacity-90 text-lg">A complete breakdown of how the MedAnalytics AI pipeline processes your data, trains models, and generates insights.</p>
+      <div className="bg-medical-600 text-white p-6 md:p-8 rounded-2xl shadow-lg">
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 flex items-center"><BookOpen className="mr-3 shrink-0" /> Architecture & ML Guide</h1>
+        <p className="opacity-90 text-base md:text-lg">A complete breakdown of how the MedAnalytics AI pipeline processes your data, trains models, and generates insights.</p>
       </div>
 
       <Section title="1. Workflow & File Architecture" icon={Network}>
@@ -78,9 +78,9 @@ const HowItWorks = () => {
 };
 
 const Section = ({ title, icon: Icon, children }) => (
-  <div className="glass-panel p-8">
-    <h2 className="text-2xl font-bold mb-6 flex items-center border-b border-gray-200 dark:border-gray-700 pb-3">
-      <Icon className="mr-3 text-medical-500" size={32} /> {title}
+  <div className="glass-panel p-6 md:p-8">
+    <h2 className="text-xl md:text-2xl font-bold mb-6 flex items-center border-b border-gray-200 dark:border-gray-700 pb-3">
+      <Icon className="mr-3 text-medical-500 shrink-0" size={28} /> {title}
     </h2>
     {children}
   </div>

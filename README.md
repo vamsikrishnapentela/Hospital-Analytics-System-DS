@@ -70,9 +70,9 @@ source venv/Scripts/activate  # On Windows
 pip install -r requirements.txt
 
 # Start the server
-uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+uvicorn app:app --host 0.0.0.0 --port 10000 --reload
 ```
-The API will run at `http://localhost:8000`. You can view the docs at `http://localhost:8000/docs`.
+The API will run at `http://localhost:10000`. You can view the docs at `http://localhost:10000/docs`.
 
 ### 3. Run the Frontend (React)
 Open a **new** terminal and navigate to the frontend folder:

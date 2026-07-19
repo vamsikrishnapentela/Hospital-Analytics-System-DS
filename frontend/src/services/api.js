@@ -3,7 +3,7 @@ import axios from 'axios';
 const api = axios.create({
   baseURL: import.meta.env.MODE === 'production' 
     ? 'https://hospital-analytics-system-ds.onrender.com' 
-    : 'http://localhost:8000',
+    : 'http://localhost:10000',
 });
 
 export const getMetrics = () => api.get('/metrics');

@@ -47,13 +47,13 @@ const UploadDataset = () => {
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-2xl mx-auto mt-10 pb-10">
-      <div className="glass-panel p-10 text-center">
-        <h1 className="text-3xl font-bold mb-2">Upload Hospital Dataset</h1>
-        <p className="text-gray-500 mb-8">Upload a CSV or Excel file containing your appointment records.</p>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-2xl mx-auto mt-6 md:mt-10 pb-10">
+      <div className="glass-panel p-6 md:p-10 text-center">
+        <h1 className="text-2xl md:text-3xl font-bold mb-2">Upload Hospital Dataset</h1>
+        <p className="text-gray-500 mb-6 md:mb-8 text-sm md:text-base">Upload a CSV or Excel file containing your appointment records.</p>
         
         <div 
-          className={`border-2 border-dashed rounded-xl p-12 transition-colors ${file ? 'border-medical-500 bg-medical-50 dark:bg-medical-900/20' : 'border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800'}`}
+          className={`border-2 border-dashed rounded-xl p-8 md:p-12 transition-colors ${file ? 'border-medical-500 bg-medical-50 dark:bg-medical-900/20' : 'border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800'}`}
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
           onClick={() => fileInputRef.current.click()}

@@ -42,14 +42,14 @@ const Predictions = () => {
       <h1 className="text-3xl font-bold">Patient Predictions</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="glass-panel p-8 text-center bg-gradient-to-br from-medical-500 to-medical-700 text-white rounded-2xl shadow-lg border-0">
+        <div className="glass-panel p-6 md:p-8 text-center bg-gradient-to-br from-medical-500 to-medical-700 text-white rounded-2xl shadow-lg border-0">
           <Calendar size={48} className="mx-auto mb-4 opacity-80" />
           <h2 className="text-xl font-medium mb-2">Tomorrow's Prediction</h2>
-          <div className="text-6xl font-bold">{tomorrow !== null ? tomorrow : 'N/A'}</div>
+          <div className="text-5xl md:text-6xl font-bold">{tomorrow !== null ? tomorrow : 'N/A'}</div>
           <p className="mt-2 opacity-80">Expected Patients</p>
         </div>
         
-        <div className="glass-panel p-8 flex flex-col justify-center">
+        <div className="glass-panel p-6 md:p-8 flex flex-col justify-center">
           <h3 className="text-xl font-semibold mb-4 flex items-center"><TrendingUp className="mr-2 text-medical-500" /> Weekly Trend Insight</h3>
           <p className="text-gray-600 dark:text-gray-300">
             Based on historical data (day of week, month, past 7 days moving average), our Random Forest model predicts patient influx to help you better allocate resources.

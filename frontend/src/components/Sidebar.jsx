@@ -16,8 +16,11 @@ const Sidebar = ({ isOpen }) => {
   return (
     <motion.div 
       initial={false}
-      animate={{ width: isOpen ? '16rem' : '4rem' }}
-      className="h-full bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden transition-all duration-300 z-10"
+      animate={{ 
+        width: isOpen ? '16rem' : '0rem',
+        x: isOpen ? 0 : (window.innerWidth <= 768 ? -256 : 0)
+      }}
+      className={`h-full bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden transition-all duration-300 z-30 fixed md:relative ${isOpen ? 'w-64' : 'w-0 md:w-16'} shrink-0`}
     >
       <div className="h-16 flex items-center px-4 border-b border-gray-200 dark:border-gray-700 shrink-0">
         <Activity className="text-medical-600 shrink-0" size={28} />
